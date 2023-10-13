@@ -52,13 +52,25 @@ my-custom-stuff:
 
 ## Introduction to High Performance Computing (HPC)
 * Lots of meanings
-* Often just a system with many machines linked together
+* Often just a system with many machines (nodes) linked together with some/all of:
+  * Lots of CPU cores per node
+  * Powerful GPUs
+  * Lots of memory per node
+  * Fast networking to link nodes
+  * Fast data storage
+  * Standardised software installation
+
+## Why
+* Run jobs too large for desktop workstations
+* Run many jobs at once
+* Efficiency (cheaper to have central machines running 24/7)
+
 * In neuroscience, typically used for:
   * Analysing large data (e.g. high memory requirements)
   * Paralellising analysis/modelling (run on many machines at once)
 
 
-## SWC HPC system
+## SWC HPC hardware
 (Correct at time of writing)
 
 * Ubuntu 20.04
@@ -68,6 +80,10 @@ my-custom-stuff:
 * 3000 CPU cores
 * 83 GPUs
 * ~20TB RAM
+
+## SWC HPC nodes
+
+## SWC HPC software
 
 ## SLURM
 
