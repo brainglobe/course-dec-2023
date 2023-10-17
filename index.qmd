@@ -1,6 +1,6 @@
 ---
 title: Running pose estimation on the SWC HPC system
-author: Adam Tyson & Niko Sirmpilatze
+author: Adam Tyson, Niko Sirmpilatze & Laura Porta
 execute: 
   enabled: true
 format:
@@ -47,7 +47,7 @@ my-custom-stuff:
 
 * Introduction to High Performance Computing
 * SWC HPC system
-* Using SLURM
+* Using the job scheduler
 * Running pose estimation on the SWC HPC
 
 ## Introduction to High Performance Computing (HPC)
@@ -83,7 +83,78 @@ my-custom-stuff:
 
 ## SWC HPC nodes
 
-## SWC HPC software
+## Logging in
+
+Log into bastion node (not necessary within SWC)
+```bash
+ssh <USERNAME>@ssh.swc.ucl.ac.uk
+```
+
+Log into HPC gateway node
+```bash
+ssh <USERNAME>@hpc-gw1.hpc.swc.ucl.ac.uk
+```
+
+## File systems
+
+* `/nfs/nhome` or `/nfs/ghome` - "home drive" (SWC/GCNU)
+* `/nfs/winstor/<group>` - "Old" research data storage (read-only soon)
+*`/nfs/gatsbystor` - GCNU data storage
+*`/ceph<group>` - Current research data storage
+*`/ceph/scratch` - Not backed up, for short-term storage
+*`ceph/apps` - HPC applications
+
+::: {.callout-note}
+You may only be able to "see" a drive if you navigate to it
+:::
+
+## HPC software
+All nodes have the same software installed
+* Ubuntu 20.04 LTS
+* General linux utilities
+
+## Modules
+Preinstalled packages available for use, including:
+
+* BrainGlobe
+* CUDA
+* DeepLabCut
+* Julia
+* Kilosort
+* mamba
+* MATLAB
+* miniconda
+* SLEAP
+
+## Using modules
+
+List available modules
+```bash
+module avail
+```
+
+Load a module
+
+```bash
+module load SLEAP
+```
+
+Unload a module
+
+```bash
+module unload SLEAP
+```
+
+Load a specific version
+```bash
+module load SLEAP/2023-08-01
+```
+
+List loaded modules
+```bash
+module list
+```
+
 
 ## SLURM
 
