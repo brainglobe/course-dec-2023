@@ -5,8 +5,8 @@ execute:
   enabled: true
 format:
     revealjs:
-        theme: [default, niu-dark.scss]
-        logo: img/logo_niu_dark.png
+        theme: [default, niu-light.scss]
+        logo: img/logo_niu_light.png
         footer: "SWC | 2023-12-06"
         slide-number: c
         menu:
@@ -25,8 +25,8 @@ format:
           fontFamily: arial
           curve: linear
     html:
-        theme: [default, niu-dark.scss]
-        logo: img/logo_niu_dark.png
+        theme: [default, niu-light.scss]
+        logo: img/logo_niu_light.png
         date: "2023-12-06"
         toc: true
         code-overflow: scroll
@@ -50,7 +50,7 @@ my-custom-stuff:
 * Using the job scheduler
 * Running pose estimation on the SWC HPC
 
-## Introduction to High Performance Computing (HPC)
+## Introduction to High Performance Computing (HPC) {.smaller}
 * Lots of meanings
 * Often just a system with many machines (nodes) linked together with some/all of:
   * Lots of CPU cores per node
@@ -64,6 +64,8 @@ my-custom-stuff:
 * Run jobs too large for desktop workstations
 * Run many jobs at once
 * Efficiency (cheaper to have central machines running 24/7)
+
+. . .
 
 * In neuroscience, typically used for:
   * Analysing large data (e.g. high memory requirements)
@@ -90,25 +92,42 @@ Log into bastion node (not necessary within SWC)
 ssh <USERNAME>@ssh.swc.ucl.ac.uk
 ```
 
+. . . 
+
 Log into HPC gateway node
 ```bash
 ssh <USERNAME>@hpc-gw1.hpc.swc.ucl.ac.uk
 ```
-
+. . .
 This node is fine for light work, but no intensive analyses
 
-## File systems
+## File systems  {.smaller}
 
 * `/nfs/nhome` or `/nfs/ghome` - "home drive" (SWC/GCNU)
 * `/nfs/winstor/<group>` - "Old" research data storage (read-only soon)
-*`/nfs/gatsbystor` - GCNU data storage
-*`/ceph<group>` - Current research data storage
-*`/ceph/scratch` - Not backed up, for short-term storage
-*`ceph/apps` - HPC applications
+* `/nfs/gatsbystor` - GCNU data storage
+* `/ceph<group>` - Current research data storage
+* `/ceph/scratch` - Not backed up, for short-term storage
+* `ceph/apps` - HPC applications
+
+. . .
 
 ::: {.callout-note}
 You may only be able to "see" a drive if you navigate to it
 :::
+
+## 
+Navigate to the scratch space
+```bash
+cd /ceph/scratch
+```
+. . .
+
+Create a directory for yourself 
+```bash
+mkdir <USERNAME>
+```
+
 
 ## HPC software
 All nodes have the same software installed
@@ -119,15 +138,26 @@ All nodes have the same software installed
 ## Modules
 Preinstalled packages available for use, including:
 
+
+:::: {.columns}
+
+::: {.column width="40%"}
 * BrainGlobe
 * CUDA
 * DeepLabCut
 * Julia
 * Kilosort
+:::
+
+::: {.column width="60%"}
 * mamba
 * MATLAB
 * miniconda
 * SLEAP
+:::
+
+::::
+
 
 ## Using modules
 
