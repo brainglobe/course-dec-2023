@@ -39,10 +39,10 @@ format:
           margin-left: 0
         embed-resources: true
         page-layout: full
-my-custom-stuff:
-   my-reuseable-variable: "I can use this wherever I want in the markdown, and change it in only once place :)"
 ---
+# Installation
 
+# BrainGlobe Initiative
 
 ## BrainGlobe Initiative
 
@@ -81,3 +81,18 @@ Established 2020 with three aims:
 ![](img/classify.png){fig-align="center" width=70%}
 
 ## cellfinder
+![](img/cells.png){fig-align="center" width=70%}
+
+## brainglobe-segmentation
+![](img/brainglobe-segmentation.png){fig-align="center" width=100%}
+
+## brainrender {background-video="video/cellfinder.mp4" background-video-loop="true"}
+
+## Website
+::: {style="text-align: center; margin-top: 1em"}
+[BrainGlobe website](https://brainglobe.info/){preview-link="true" style="text-align: center"}
+:::
+
+  
+
+# napari
