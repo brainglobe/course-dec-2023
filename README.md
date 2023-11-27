@@ -1,3 +1,3 @@
-# Running pose estimation on the SWC HPC system
+# December 2023 BrainGlobe and napari course
 
-Slides for the [Running pose estimation on the SWC HPC system](https://software-skills.neuroinformatics.dev/courses/hpc-behaviour.html) course at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/web/)
+ Materials for the BrainGlobe & napari course at the Sainsbury Wellcome Centre 
