@@ -45,6 +45,7 @@ jobs:
           mv index_files build/
           touch build/.nojekyll
           cp -r img build/
+          cp -r video build/
 
       - name: Deploy
         if: github.event_name == 'push'
