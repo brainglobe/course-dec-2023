@@ -43,14 +43,48 @@ format:
 # Welcome
 
 ## Schedule
-* Installation
+
+### Morning
+::: {.incremental}
+* Installation (AT & AF)
+* Introduction to BrainGlobe (AT)
+* Introduction to napari (AF)
+* Napari demo (AF)
+* BrainGlobe & napari (AF) 
+* Whole brain atlas registration & segmentation (AT)
+:::
+
+## Schedule
+
+### Afternoon
+::: {.incremental}
+* 3D cell detection (AT)
+* Analysing silicon probe tracks (AT)
+* Analysing bulk fluorescence (AT)
+* Using BrainGlobe in your own software (AF)
+* Wrap up and Q&A (AT & AF)
+:::
 
 # Installation
 
-# BrainGlobe Initiative
+# BrainGlobe
 
-## BrainGlobe Initiative
+## BrainGlobe Initiative {.smaller}
 
+::: {.columns}
+::: {.column width="55%"}
+Established 2020 with three aims:
+
+1. Develop general-purpose tools to help others build interoperable software
+2. Develop specialist software for specific analysis and visualisation needs
+3. Reduce barriers of entry, and facilitate the building of an ecosystem of computational neuroanatomy tools.
+:::
+::: {.column width="45%"}
+![](img/tracing.png)
+:::
+:::
+
+## BG
 Established 2020 with three aims:
 
 1. Develop general-purpose tools to help others build interoperable software
@@ -59,6 +93,10 @@ Established 2020 with three aims:
 
 ## BrainGlobe Atlas API
 ![](img/atlases.png){}
+
+::: footer
+[Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+:::
 
 ## BrainGlobe Atlas API {.smaller}
 **Currently implemented atlases**
@@ -76,28 +114,75 @@ Established 2020 with three aims:
 * [Princeton Mouse Brain Atlas](https://brainmaps.princeton.edu/2020/09/princeton-mouse-brain-atlas-links) at 20 micron resolution
 * [Kim Lab Developmental CCF (P56)](https://data.mendeley.com/datasets/2svx788ddf/1) at 10 micron resolution with 8 reference images - STP, LSFM (iDISCO) and MRI (a0, adc, dwo, fa, MTR, T2)
 
+::: footer
+[Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+:::
+
 ## cellfinder
 ![](img/raw.png){fig-align="center" width=70%}
+
+::: footer
+[Tyson, A. L., Rousseau, C. V., Niedworok, C. J. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
 
 ## cellfinder
 ![](img/detect.png){fig-align="center" width=70%}
 
+::: footer
+[Tyson, A. L., Rousseau, C. V., Niedworok, C. J. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
+
 ## cellfinder
 ![](img/classify.png){fig-align="center" width=70%}
 
+::: footer
+[Tyson, A. L., Rousseau, C. V., Niedworok, C. J. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
+
 ## cellfinder
 ![](img/cells.png){fig-align="center" width=70%}
+
+::: footer
+[Tyson, A. L., Rousseau, C. V., Niedworok, C. J. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
 
 ## brainglobe-segmentation
 ![](img/brainglobe-segmentation.png){fig-align="center" width=100%}
 
 ## brainrender {background-video="video/cellfinder_small.mp4" background-video-loop="true"}
 
-## Website
-::: {style="text-align: center; margin-top: 1em"}
-[BrainGlobe website](https://brainglobe.info/){preview-link="true" style="text-align: center"}
-:::
+# [BrainGlobe website](https://brainglobe.info/){preview-link="true" style="text-align: center"}
 
   
 
 # napari
+
+# napari demo
+
+# BrainGlobe & napari
+
+# Registration & segmentation
+
+# Cell detection
+
+# Silicon probe tracing
+
+# Bulk fluorescence mapping
+
+# BrainGlobe & your software
+* Not just standalone tools
+* Python APIs to help you build your own software
+* Easy compatibility with other packages
+* [Released tools](https://brainglobe.info/community/external-tools.html){preview-link="true"}
+
+# Wrap up
+
+## Resources
+* [BrainGlobe website](https://brainglobe.info/){preview-link="true"}
+* [Help forum](https://forum.image.sc/tag/brainglobe/){preview-link="true"}
+* [Developer forum](https://brainglobe.zulipchat.com/){preview-link="true"}
+* [GitHub](https://github.com/brainglobe/){preview-link="true"}
+
+
+
+# Questions

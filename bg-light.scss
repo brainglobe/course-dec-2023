@@ -6,3 +6,7 @@ $link-color: #ee9040 !default;
 $font-family-sans-serif: arial, "open sans", "helvetica neue", helvetica, sans-serif !default;
 $mermaid-font-family: arial;
 /*-- scss:rules --*/
+
+.reveal .footer {
+    font-size: 0.35em !important;
+  }
