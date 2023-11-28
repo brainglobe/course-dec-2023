@@ -40,6 +40,10 @@ format:
         embed-resources: true
         page-layout: full
 ---
+# Welcome
+
+## Schedule
+
 # Installation
 
 # BrainGlobe Initiative
