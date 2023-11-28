@@ -90,7 +90,7 @@ Established 2020 with three aims:
 ## brainglobe-segmentation
 ![](img/brainglobe-segmentation.png){fig-align="center" width=100%}
 
-## brainrender {background-video="video/cellfinder.mp4" background-video-loop="true"}
+## brainrender {background-video="img/cellfinder.mp4" background-video-loop="true"}
 
 ## Website
 ::: {style="text-align: center; margin-top: 1em"}
