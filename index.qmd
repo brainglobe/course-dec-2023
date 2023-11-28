@@ -84,12 +84,6 @@ Established 2020 with three aims:
 :::
 :::
 
-## BG
-Established 2020 with three aims:
-
-1. Develop general-purpose tools to help others build interoperable software
-2. Develop specialist software for specific analysis and visualisation needs
-3. Reduce barriers of entry, and facilitate the building of an ecosystem of computational neuroanatomy tools.
 
 ## BrainGlobe Atlas API
 Initial observation - lots of similar communities working independently
@@ -171,13 +165,38 @@ pprint(VISp)
 [Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
 :::
 
+## Whole brain microscopy {.smaller}
+::: {.columns}
+::: {.column width="33%"}
+Serial section two-photon tomography
+:::
+::: {.column width="33%"}
+Fluorescence micro-optical sectioning tomography
+:::
+::: {.column width="33%"}
+Light sheet fluorescence microscopy
+:::
+:::
+
+::: footer
+[Osten, P. , Margrie, T. W. (2013) “Mapping brain circuitry with a light microscope” Nature Methods 10, 515–523](https://doi.org/10.1038/nmeth.2477)
+:::
+
+![](img/microscopy.png){fig-align="center" width=110%}
+
 ## Whole brain microscopy
 ![](img/serial2p.png){fig-align="center" width=110%}
 
 ## Whole brain microscopy
 ![](img/serial2p_crop.png){fig-align="center" width=110%}
 
+## brainreg
+![](img/brainreg.png){fig-align="center" width=110%}
 
+
+::: footer
+[Tyson, A. L., Vélez-Fort, M., Rousseau, C. V. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+:::
 
 ## cellfinder
 ![](img/raw.png){fig-align="center" width=70%}
@@ -208,14 +227,59 @@ pprint(VISp)
 :::
 
 ## brainglobe-segmentation
+![](img/brainglobe-seg.png){fig-align="center" width=100%}
+
+::: footer
+[Tyson, A. L., Vélez-Fort, M., Rousseau, C. V. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+:::
+
+## brainglobe-segmentation
+::: {.columns}
+::: {.column width="25%"}
+![](img/bg-seg-users.png){fig-align="center" width=90%}
+:::
+::: {.column width="25%"}
+![](img/bg-seg-midvisp.png){fig-align="center" width=100%}
+:::
+::: {.column width="50%"}
+![](img/bg-seg-means.png){fig-align="center" width=100%}
+:::
+:::
+
+::: footer
+[Tyson, A. L., Vélez-Fort, M., Rousseau, C. V. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+:::
+
+## brainglobe-segmentation
 ![](img/brainglobe-segmentation.png){fig-align="center" width=100%}
+
+::: footer
+[Tyson, A. L., Vélez-Fort, M., Rousseau, C. V. et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+:::
+
+
+## brainrender
+::: {.columns}
+::: {.column width="33%"}
+![](img/br-mouse.png){fig-align="center" height=300px}
+:::
+::: {.column width="33%"}
+![](img/br-human.png){fig-align="center" height=300px}
+:::
+::: {.column width="33%"}
+![](img/br-zebrafish.png){fig-align="center" height=300px}
+:::
+:::
+::: footer
+[Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife](https://doi.org/10.7554/eLife.65751)
+:::
+
 
 ## brainrender {background-video="video/cellfinder_small.mp4" background-video-loop="true"}
 
 # [BrainGlobe website](https://brainglobe.info/){preview-link="true" style="text-align: center"}
 
   
-
 # napari
 
 # napari demo
