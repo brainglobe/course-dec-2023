@@ -43,6 +43,7 @@ format:
 # Welcome
 
 ## Schedule
+* Installation
 
 # Installation
 
