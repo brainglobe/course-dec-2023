@@ -92,6 +92,19 @@ Established 2020 with three aims:
 3. Reduce barriers of entry, and facilitate the building of an ecosystem of computational neuroanatomy tools.
 
 ## BrainGlobe Atlas API
+Initial observation - lots of similar communities working independently
+
+- Model species
+- Imaging modality
+- Anatomical focus
+- Developmental stage
+
+
+::: footer
+[Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+:::
+
+## BrainGlobe Atlas API
 ![](img/atlases.png){}
 
 ::: footer
@@ -117,6 +130,54 @@ Established 2020 with three aims:
 ::: footer
 [Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
 :::
+
+
+## BrainGlobe Atlas API{.smaller}
+
+```python
+from pprint import pprint
+from bg_atlasapi.bg_atlas import BrainGlobeAtlas
+atlas = BrainGlobeAtlas("allen_mouse_25um")
+
+# reference image
+reference_image = atlas.reference
+print(reference_image.shape)
+# (528, 320, 456)
+
+# hemispheres image (value 1 in left hemisphere, 2 in right)
+hemispheres_image = atlas.hemispheres
+print(hemispheres_image.shape)
+# (528, 320, 456)
+
+VISp = atlas.structures["VISp"]
+pprint(VISp)
+# {'acronym': 'VISp',
+#  'id': 385,
+#  'mesh': None,
+#  'mesh_filename': PosixPath('/home/user/.brainglobe/allen_mouse_25um_v0.3/meshes/385.obj')
+#  'name': 'Primary visual area',
+#  'rgb_triplet': [8, 133, 140],
+#  'structure_id_path': [997, 8, 567, 688, 695, 315, 669, 385]}
+```
+
+::: footer
+[Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+:::
+
+## BrainGlobe Atlas API
+![](img/brainglobe_cli.png){fig-align="center" width=110%}
+
+::: footer
+[Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668 ](https://doi.org/10.21105/joss.02668)
+:::
+
+## Whole brain microscopy
+![](img/serial2p.png){fig-align="center" width=110%}
+
+## Whole brain microscopy
+![](img/serial2p_crop.png){fig-align="center" width=110%}
+
+
 
 ## cellfinder
 ![](img/raw.png){fig-align="center" width=70%}
