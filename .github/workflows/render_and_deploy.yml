@@ -38,7 +38,7 @@ jobs:
           quarto render index.qmd --to revealjs
 
       - name: Move outputs to build folder
-        if: github.event_name == 'push' && github.ref_type == 'tag'
+        if: github.event_name == 'push'
         run: |
           mkdir build
           mv index.html build/
@@ -47,7 +47,7 @@ jobs:
           cp -r img build/
 
       - name: Deploy
-        if: github.event_name == 'push' && github.ref_type == 'tag'
+        if: github.event_name == 'push'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
