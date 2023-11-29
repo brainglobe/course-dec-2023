@@ -10,8 +10,8 @@
 Depends on many other open-source libraries
 
 * Python based, open-source
-* Graphical user interface [uses `qtpy`](https://github.com/spyder-ide/qtpy)
-* Rendering [in `vispy`](https://github.com/vispy/vispy#vispy-interactive-scientific-visualization-in-python)
+* Graphical user interface uses [`qtpy`](https://github.com/spyder-ide/qtpy)
+* Rendering in [`vispy`](https://github.com/vispy/vispy#vispy-interactive-scientific-visualization-in-python)
 * Images are `numpy`(-like) arrays
 * Interactive scripting with `IPython`
 ::: 
