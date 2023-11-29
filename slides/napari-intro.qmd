@@ -87,8 +87,8 @@ The immature ecosystem means:
 
 ## The possibilities are endless
 
-{{< video https://private-user-images.githubusercontent.com/21022743/233817006-67ab4165-0b9a-46aa-9731-5964448252de.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEyNTEyMTksIm5iZiI6MTcwMTI1MDkxOSwicGF0aCI6Ii8yMTAyMjc0My8yMzM4MTcwMDYtNjdhYjQxNjUtMGI5YS00NmFhLTk3MzEtNTk2NDQ0ODI1MmRlLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI5VDA5NDE1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTYzMmI3NmI2YjhiZWZjNzBiZGU3ZmMxOTQ5MzBkYTJmNzlmNDJlZmZkZjRlZjcyMGI2MmQ1YjRmY2E1MTVhYTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.BGo-KlId2kVmwGO8ZyrhQBVUtqvtxN8AR2kDXlILeEc >}}
+{{< video video/napari-napari.mp4 >}}
 
 ::: footer
-[Napari-napari](https://github.com/jookuma/napari-napari)
+Video re-used from [Napari-napari](https://github.com/jookuma/napari-napari) under BSD-3 license.
 :::
