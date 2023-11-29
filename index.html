@@ -7,7 +7,9 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="index_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Adam Tyson &amp; Alessandro Felder">
@@ -674,11 +676,102 @@ Adam Tyson &amp; Alessandro Felder
 
 </section>
 
+<section>
 <section id="napari" class="title-slide slide level1 center">
-<h1>napari</h1>
+<h1><a href="https://napari.org/" data-preview-link="true" style="text-align: center">napari</a></h1>
 
 </section>
+<section id="what-does-napari-look-like" class="slide level2">
+<h2>What does napari look like?</h2>
 
+<img data-src="img/napari.png" class="r-stretch"></section>
+<section id="the-napari-tech-stack" class="slide level2">
+<h2>The napari tech stack</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>Depends on many other open-source libraries</p>
+<ul>
+<li>Python based, open-source</li>
+<li>Graphical user interface uses <a href="https://github.com/spyder-ide/qtpy"><code>qtpy</code></a></li>
+<li>Rendering in <a href="https://github.com/vispy/vispy#vispy-interactive-scientific-visualization-in-python"><code>vispy</code></a></li>
+<li>Images are <code>numpy</code>(-like) arrays</li>
+<li>Interactive scripting with <code>IPython</code></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="img/napari-dependencies.png"></p>
+</div>
+</div>
+</section>
+<section id="who-has-used-napari-before" class="slide level2">
+<h2>Who has used napari before?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>increasing in popularity</li>
+<li>still a bit immature</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/napari.png" style="width:100.0%"></p>
+</div>
+</div>
+</section>
+<section id="basic-functionality" class="slide level2">
+<h2>Basic functionality</h2>
+<p>On it’s own, napari can:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment fade-in-then-semi-out" data-fragment-index="1">
+<ul>
+<li>open and display multi-dimensional images and overlays</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out" data-fragment-index="2">
+<ul>
+<li>manipulate these</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out" data-fragment-index="3">
+<ul>
+<li>install plugins</li>
+</ul>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="r-stack">
+<p><img data-src="img/napari-highlight-viewer.png" class="fragment fade-in-then-out" data-fragment-index="1"></p>
+<p><img data-src="img/napari-highlight-controls.png" class="fragment fade-in-then-out" data-fragment-index="2"></p>
+<p><img data-src="img/napari-install-plugins.png" class="fragment fade-in-then-out" data-fragment-index="3"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-is-it-good" class="slide level2">
+<h2>Why is it good?</h2>
+<p>It leverages Python well:</p>
+<ul>
+<li>Open source</li>
+<li>Easy access to (scientific) Python (in several ways)</li>
+<li>Plugin installation (and development) easy</li>
+<li>(Relatively) good documentation</li>
+<li>Friendly and diverse community (including designers)</li>
+<li>Funding for plugins in research available</li>
+</ul>
+</section>
+<section id="why-is-it-not-so-good" class="slide level2">
+<h2>Why is it not-so-good?</h2>
+<p>The immature ecosystem means:</p>
+<ul>
+<li>things occasionally break (but lots of enthusiastic support available)</li>
+<li>several plugins to do the same thing (please don’t reinvent the wheel - re-use other people’s wheels!)</li>
+<li>installation trickier than e.g.&nbsp;Fiji/ImageJ</li>
+</ul>
+</section>
+<section id="the-possibilities-are-endless" class="slide level2">
+<h2>The possibilities are endless</h2>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://private-user-images.githubusercontent.com/21022743/233817006-67ab4165-0b9a-46aa-9731-5964448252de.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEyNTEyMTksIm5iZiI6MTcwMTI1MDkxOSwicGF0aCI6Ii8yMTAyMjc0My8yMzM4MTcwMDYtNjdhYjQxNjUtMGI5YS00NmFhLTk3MzEtNTk2NDQ0ODI1MmRlLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI5VDA5NDE1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTYzMmI3NmI2YjhiZWZjNzBiZGU3ZmMxOTQ5MzBkYTJmNzlmNDJlZmZkZjRlZjcyMGI2MmQ1YjRmY2E1MTVhYTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.BGo-KlId2kVmwGO8ZyrhQBVUtqvtxN8AR2kDXlILeEc"></video>
+<div class="footer">
+<p><a href="https://github.com/jookuma/napari-napari">Napari-napari</a></p>
+</div>
+</section></section>
 <section id="napari-demo" class="title-slide slide level1 center">
 <h1>napari demo</h1>
 
@@ -1099,6 +1192,7 @@ Adam Tyson &amp; Alessandro Felder
       }
     });
     </script>
+    
     
 
 </body></html>
