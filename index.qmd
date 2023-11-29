@@ -280,7 +280,10 @@ Light sheet fluorescence microscopy
 # [BrainGlobe website](https://brainglobe.info/){preview-link="true" style="text-align: center"}
 
   
-# napari
+
+# [napari](https://napari.org/){preview-link="true" style="text-align: center"}
+
+{{< include slides/napari-intro.qmd >}}
 
 # napari demo
 
