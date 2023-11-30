@@ -778,11 +778,169 @@ Adam Tyson &amp; Alessandro Felder
 <p>Video re-used from <a href="https://github.com/jookuma/napari-napari">Napari-napari</a> under BSD-3 license.</p>
 </div>
 </section></section>
+<section>
 <section id="napari-demo" class="title-slide slide level1 center">
 <h1>napari demo</h1>
 
 </section>
+<section id="napari-demo-1" class="slide level2">
+<h2>napari-demo</h2>
+<ul>
+<li>please open <code>napari</code> and follow allow with the live demo</li>
+</ul>
+</section>
+<section id="data-exploration" class="slide level2">
+<h2>Data exploration</h2>
+<p>After following along, your screen should look something like:</p>
 
+<img data-src="img/napari-demo-data-exploration.png" class="r-stretch quarto-figure-center"><aside class="notes">
+<ul>
+<li>open a data set (built-in)</li>
+<li>explore the dataset in 2d using the slider</li>
+<li>render the dataset in 3d</li>
+<li>hover over things to see what they do</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-exploration-1" class="slide level2">
+<h2>Data exploration</h2>
+<div style="text-align: center; margin-top: 1em">
+<p><a href="https://www.menti.com/albip99qf3m8" data-preview-link="true" style="text-align: center">Mentimeter</a></p>
+</div>
+
+<img data-src="img/napari-demo-data-exploration.png" class="r-stretch quarto-figure-center"></section>
+<section id="layer-controls" class="slide level2">
+<h2>Layer controls</h2>
+<p>After following along, your screen should look something like:</p>
+
+<img data-src="img/napari-demo-layer-controls.png" class="r-stretch quarto-figure-center"><aside class="notes">
+<ul>
+<li>like photoshop</li>
+<li>select an image layer</li>
+<li>toggle visibility</li>
+<li>change the lookup table</li>
+<li>other layers, e.g.&nbsp;points layer</li>
+<li>add/delete/select a point/select multiple points</li>
+<li>save a layer</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="layer-controls-1" class="slide level2">
+<h2>Layer controls</h2>
+<div style="text-align: center; margin-top: 1em">
+<p><a href="https://www.menti.com/albip99qf3m8" data-preview-link="true" style="text-align: center">Mentimeter</a></p>
+</div>
+
+<img data-src="img/napari-demo-layer-controls.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-ipython-console" class="slide level2">
+<h2>The IPython console</h2>
+<ol type="1">
+<li>Navigate to <code>Window &gt; Console</code></li>
+<li>In the console, run (each line separately)</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> napari</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="im">from</span> cellfinder_core.tools.IO <span class="im">import</span> read_with_dask</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>viewer <span class="op">=</span> napari.viewer.current_viewer()</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># adapt "path/to/data" to your folder of tiffs</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>path_to_data <span class="op">=</span> Path(<span class="st">"path/to/data"</span>) </span>
+<span id="cb2-9"><a href="#cb2-9"></a>viewer.<span class="bu">open</span>(path_to_data)</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="bu">print</span>(viewer.layers)</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># which of these is quicker?</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="op">%</span>timeit <span class="op">-</span>r <span class="dv">3</span> <span class="op">-</span>n <span class="dv">1</span> viewer.<span class="bu">open</span>(path_to_data)</span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="op">%</span>timeit <span class="op">-</span>r <span class="dv">3</span> <span class="op">-</span>n <span class="dv">1</span> viewer.add_image(read_with_dask(<span class="bu">str</span>(path_to_data)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<ul>
+<li>access the viewer and manipulate the data</li>
+<li>load data without dask</li>
+<li>load data with dask</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="footer">
+<p><a href="https://www.dask.org/get-started">More about Dask</a></p>
+</div>
+</section>
+<section id="the-ipython-console-1" class="slide level2">
+<h2>The IPython console</h2>
+<p>After following along, your screen should look something like:</p>
+
+<img data-src="img/napari-demo-ipython-console.png" class="r-stretch quarto-figure-center"><div class="footer">
+<p><a href="https://www.dask.org/get-started">More about Dask</a></p>
+</div>
+</section>
+<section id="the-ipython-console-2" class="slide level2">
+<h2>The IPython console</h2>
+<div style="text-align: center; margin-top: 1em">
+<p><a href="https://www.menti.com/albip99qf3m8" data-preview-link="true" style="text-align: center">Mentimeter</a></p>
+</div>
+
+<img data-src="img/napari-demo-ipython-console.png" class="r-stretch quarto-figure-center"></section>
+<section id="plugin-installation" class="slide level2">
+<h2>Plugin installation</h2>
+<ol type="1">
+<li>Navigate to <code>Plugins &gt; Install/Uninstall plugins...</code></li>
+<li>Search for <code>brainrender-napari</code></li>
+<li>Click the <code>Install</code> button</li>
+<li>Close the pop-up notification</li>
+<li>Restart <code>napari</code></li>
+<li>Open <code>Plugins &gt; Brainrender (brainrender-napari)</code></li>
+<li>Explore the Brainrender plugin</li>
+</ol>
+</section>
+<section id="plugin-installation-1" class="slide level2">
+<h2>Plugin installation</h2>
+<p>After following along, your screen should look something like:</p>
+
+<img data-src="img/napari-demo-plugin-installation.png" class="r-stretch quarto-figure-center"></section>
+<section id="plugin-installation-2" class="slide level2">
+<h2>Plugin installation</h2>
+<div style="text-align: center; margin-top: 1em">
+<p><a href="https://www.menti.com/albip99qf3m8" data-preview-link="true" style="text-align: center">Mentimeter</a></p>
+</div>
+
+<img data-src="img/napari-demo-plugin-installation.png" class="r-stretch quarto-figure-center"></section>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<ul>
+<li>You can open, view, edit and save layers in <code>napari</code></li>
+<li>You can run Python commands with the <code>napari</code> console</li>
+<li>You can install and open plugins</li>
+</ul>
+</section></section>
 <section id="brainglobe-napari" class="title-slide slide level1 center">
 <h1>BrainGlobe &amp; napari</h1>
 
