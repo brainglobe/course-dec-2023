@@ -72,12 +72,19 @@ print(viewer.layers)
 * load data with dask
 :::
 
+::: {.footer}
+[More about Dask](https://www.dask.org/get-started)
+:::
 
 ## The IPython console
 
 After following along, your screen should look something like:
 
 ![](img/napari-demo-ipython-console.png){fig-align="center"}
+
+::: {.footer}
+[More about Dask](https://www.dask.org/get-started)
+:::
 
 ## The IPython console
 
