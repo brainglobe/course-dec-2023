@@ -315,6 +315,8 @@ Light sheet fluorescence microscopy
 * [Developer forum](https://brainglobe.zulipchat.com/){preview-link="true"}
 * [GitHub](https://github.com/brainglobe/){preview-link="true"}
 
+## Feedback
 
+Please give us [some feedback](https://ideaboardz.com/for/BrainGlobe%20course%20feedback/5139784) on this pilot course.
 
 # Questions
