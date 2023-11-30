@@ -67,6 +67,10 @@ format:
 
 # Installation
 
+## Initial checkup
+
+{{< include slides/mentimeter.qmd >}}
+
 # BrainGlobe
 
 ## BrainGlobe Initiative {.smaller}
