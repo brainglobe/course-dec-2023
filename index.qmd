@@ -291,6 +291,8 @@ Light sheet fluorescence microscopy
 
 # napari demo
 
+{{< include slides/napari-demo.qmd >}}
+
 # BrainGlobe & napari
 
 # Registration & segmentation
