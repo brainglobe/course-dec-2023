@@ -1,7 +1,7 @@
 ---
 title: BrainGlobe and napari
 subtitle: Whole brain microscopy analysis
-author: Adam Tyson & Alessandro Felder
+author: Adam Tyson, Alessandro Felder & Laura Porta
 execute: 
   enabled: true
 format:
