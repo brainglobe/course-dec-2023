@@ -67,6 +67,8 @@ format:
 
 # Installation
 
+{{< include slides/installation.qmd >}}
+
 ## Initial checkup
 
 {{< include slides/mentimeter.qmd >}}

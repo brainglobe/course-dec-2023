@@ -1,0 +1,18 @@
+## Command line installation
+
+. . .
+
+**Create a new conda environment and install napari**
+```bash
+conda create --name brainglobe python=3.10 -y
+conda activate brainglobe
+conda install napari -c conda-forge
+```
+
+. . .
+
+::: {.callout-tip}
+## More details
+
+More details about using conda are available at [brainglobe.info](https://brainglobe.info/documentation/setting-up/conda.html){preview-link="true"}
+:::
