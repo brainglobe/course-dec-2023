@@ -451,6 +451,11 @@ Adam Tyson, Alessandro Felder &amp; Laura Porta
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">conda</span> create <span class="at">--name</span> brainglobe python=3.10 <span class="at">-y</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="ex">conda</span> activate brainglobe</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="ex">conda</span> install napari <span class="at">-c</span> conda-forge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On newer Macs, please also</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">conda</span> install hdf5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Finally, double-check that running</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">napari</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>opens a new <code>napari</code> window.</p>
 </div>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -537,29 +542,29 @@ Adam Tyson, Alessandro Felder &amp; Laura Porta
 </section>
 <section id="brainglobe-atlas-api-3" class="slide level2 smaller">
 <h2>BrainGlobe Atlas API</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">from</span> pprint <span class="im">import</span> pprint</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="im">from</span> bg_atlasapi.bg_atlas <span class="im">import</span> BrainGlobeAtlas</span>
-<span id="cb2-3"><a href="#cb2-3"></a>atlas <span class="op">=</span> BrainGlobeAtlas(<span class="st">"allen_mouse_25um"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># reference image</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>reference_image <span class="op">=</span> atlas.reference</span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="bu">print</span>(reference_image.shape)</span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># (528, 320, 456)</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="co"># hemispheres image (value 1 in left hemisphere, 2 in right)</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>hemispheres_image <span class="op">=</span> atlas.hemispheres</span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="bu">print</span>(hemispheres_image.shape)</span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># (528, 320, 456)</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a></span>
-<span id="cb2-15"><a href="#cb2-15"></a>VISp <span class="op">=</span> atlas.structures[<span class="st">"VISp"</span>]</span>
-<span id="cb2-16"><a href="#cb2-16"></a>pprint(VISp)</span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="co"># {'acronym': 'VISp',</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="co">#  'id': 385,</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="co">#  'mesh': None,</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="co">#  'mesh_filename': PosixPath('/home/user/.brainglobe/allen_mouse_25um_v0.3/meshes/385.obj')</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="co">#  'name': 'Primary visual area',</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a><span class="co">#  'rgb_triplet': [8, 133, 140],</span></span>
-<span id="cb2-23"><a href="#cb2-23"></a><span class="co">#  'structure_id_path': [997, 8, 567, 688, 695, 315, 669, 385]}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">from</span> pprint <span class="im">import</span> pprint</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="im">from</span> bg_atlasapi.bg_atlas <span class="im">import</span> BrainGlobeAtlas</span>
+<span id="cb4-3"><a href="#cb4-3"></a>atlas <span class="op">=</span> BrainGlobeAtlas(<span class="st">"allen_mouse_25um"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co"># reference image</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>reference_image <span class="op">=</span> atlas.reference</span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="bu">print</span>(reference_image.shape)</span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co"># (528, 320, 456)</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co"># hemispheres image (value 1 in left hemisphere, 2 in right)</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>hemispheres_image <span class="op">=</span> atlas.hemispheres</span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="bu">print</span>(hemispheres_image.shape)</span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="co"># (528, 320, 456)</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a>VISp <span class="op">=</span> atlas.structures[<span class="st">"VISp"</span>]</span>
+<span id="cb4-16"><a href="#cb4-16"></a>pprint(VISp)</span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="co"># {'acronym': 'VISp',</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="co">#  'id': 385,</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="co">#  'mesh': None,</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="co">#  'mesh_filename': PosixPath('/home/user/.brainglobe/allen_mouse_25um_v0.3/meshes/385.obj')</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="co">#  'name': 'Primary visual area',</span></span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="co">#  'rgb_triplet': [8, 133, 140],</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="co">#  'structure_id_path': [997, 8, 567, 688, 695, 315, 669, 385]}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
 <p><a href="https://doi.org/10.21105/joss.02668">Claudi, F., Petrucco, L., Tyson, A. L. et al (2020) “BrainGlobe Atlas API: a common interface for neuroanatomical atlases” Journal of Open Source Software, v5(54), 2668</a></p>
 </div>
@@ -882,21 +887,21 @@ Adam Tyson, Alessandro Felder &amp; Laura Porta
 <li>Navigate to <code>Window &gt; Console</code></li>
 <li>In the console, run (each line separately)</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> napari</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="im">from</span> cellfinder_core.tools.IO <span class="im">import</span> read_with_dask</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a>viewer <span class="op">=</span> napari.viewer.current_viewer()</span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="co"># adapt "path/to/data" to your folder of tiffs</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>path_to_data <span class="op">=</span> Path(<span class="st">"path/to/data"</span>) </span>
-<span id="cb3-9"><a href="#cb3-9"></a>viewer.<span class="bu">open</span>(path_to_data)</span>
-<span id="cb3-10"><a href="#cb3-10"></a></span>
-<span id="cb3-11"><a href="#cb3-11"></a><span class="bu">print</span>(viewer.layers)</span>
-<span id="cb3-12"><a href="#cb3-12"></a></span>
-<span id="cb3-13"><a href="#cb3-13"></a><span class="co"># which of these is quicker?</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a><span class="op">%</span>timeit <span class="op">-</span>r <span class="dv">3</span> <span class="op">-</span>n <span class="dv">1</span> viewer.<span class="bu">open</span>(path_to_data)</span>
-<span id="cb3-15"><a href="#cb3-15"></a><span class="op">%</span>timeit <span class="op">-</span>r <span class="dv">3</span> <span class="op">-</span>n <span class="dv">1</span> viewer.add_image(read_with_dask(<span class="bu">str</span>(path_to_data)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> napari</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="im">from</span> cellfinder_core.tools.IO <span class="im">import</span> read_with_dask</span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a>viewer <span class="op">=</span> napari.viewer.current_viewer()</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># adapt "path/to/data" to your folder of tiffs</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>path_to_data <span class="op">=</span> Path(<span class="st">"path/to/data"</span>) </span>
+<span id="cb5-9"><a href="#cb5-9"></a>viewer.<span class="bu">open</span>(path_to_data)</span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="bu">print</span>(viewer.layers)</span>
+<span id="cb5-12"><a href="#cb5-12"></a></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="co"># which of these is quicker?</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="op">%</span>timeit <span class="op">-</span>r <span class="dv">3</span> <span class="op">-</span>n <span class="dv">1</span> viewer.<span class="bu">open</span>(path_to_data)</span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="op">%</span>timeit <span class="op">-</span>r <span class="dv">3</span> <span class="op">-</span>n <span class="dv">1</span> viewer.add_image(read_with_dask(<span class="bu">str</span>(path_to_data)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <ul>
 <li>access the viewer and manipulate the data</li>
