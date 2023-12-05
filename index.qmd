@@ -88,6 +88,8 @@ format:
 
 # BrainGlobe & napari
 
+{{< include slides/brainglobe-and-napari.qmd >}}
+
 # Registration & segmentation
 
 # Cell detection
@@ -97,10 +99,50 @@ format:
 # Bulk fluorescence mapping
 
 # BrainGlobe & your software
+
+## BrainGlobe & your software
 * Not just standalone tools
 * Python APIs to help you build your own software
 * Easy compatibility with other packages
 * [Released tools](https://brainglobe.info/community/external-tools.html){preview-link="true"}
+
+## Example script
+* Find all hippocampal regions (`bg-atlasapi`)
+* Display them in napari (`brainrender-napari`)
+
+## Example script (demo)
+```{.python}
+import napari
+from bg_atlasapi import BrainGlobeAtlas
+from brainrender_napari.napari_atlas_representation import NapariAtlasRepresentation
+
+# setup a napari viewer and a brainglobe atlas
+viewer = napari.viewer.Viewer()
+viewer.dims.ndisplay = 3 # set to 3d mode
+atlas = BrainGlobeAtlas("allen_mouse_100um")
+
+# find all hippocampal regions
+hip_id = 1080 # the id of the hippocampus is 1080
+hip_regions = [
+    region["acronym"] 
+    for region in atlas.structures_list 
+    if hip_id in region["structure_id_path"]
+]
+
+# make a representation of the brainglobe atlas in napari
+napari_atlas = NapariAtlasRepresentation(atlas, viewer)
+
+# add all hippocampal regions to the napari viewer
+for hip_region in hip_regions:
+    napari_atlas.add_structure_to_viewer(hip_region)
+
+# add the whole brain mesh as a help for orientation
+napari_atlas.add_structure_to_viewer("root")
+
+# run this script
+if __name__ == "__main__":
+    napari.run()
+```
 
 # Wrap up
 
@@ -110,8 +152,14 @@ format:
 * [Developer forum](https://brainglobe.zulipchat.com/){preview-link="true"}
 * [GitHub](https://github.com/brainglobe/){preview-link="true"}
 
+You are welcome to contribute to BrainGlobe - get in touch anytime and we will support you!
+
+## Q+A
+
+{{< include slides/mentimeter.qmd >}}
+
 ## Feedback
 
 Please give us [some feedback](https://ideaboardz.com/for/BrainGlobe%20course%20feedback/5139784) on this pilot course.
 
-# Questions
+# Thank you!

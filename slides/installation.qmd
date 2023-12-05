@@ -8,11 +8,8 @@ conda create --name brainglobe python=3.10 -y
 conda activate brainglobe
 conda install napari -c conda-forge
 ```
-On newer Macs, please also
-```bash
-conda install hdf5
-```
-Finally, double-check that running
+
+Double-check that running
 ```bash
 napari
 ```
@@ -25,3 +22,19 @@ opens a new `napari` window.
 
 More details about using conda are available at [brainglobe.info](https://brainglobe.info/documentation/setting-up/conda.html){preview-link="true"}
 :::
+
+## Install brainglobe napari plugins
+
+::: {.callout-caution}
+## Silicon Mac users 
+Run this first:
+```bash
+conda install hdf5
+```
+:::
+
+Install all brainglobe tools with
+```{.bash}
+pip install brainglobe
+```
+

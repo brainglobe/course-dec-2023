@@ -1,0 +1,24 @@
+
+
+## Graphical user interfaces
+
+::: {.smaller}
+Aimed at user-friendliness/visual exploration.
+:::
+
+![](img/brainreg-widget.png){width="30%"}
+![](img/brainglobe-segmentation-widget.png){width="30%"}
+![](img/cellfinder-widget.png){width="30%" height="50%"}
+
+
+## Python APIs
+::: {.smaller}
+Aimed at automation and integration within other tools.
+:::
+
+* general APIs (to integrate in your general Python scripts)
+    *  some napari-specific functionality e.g. `NapariAtlasRepresentation`
+* (command line interfaces)
+
+More about this in the afternoon.
+
