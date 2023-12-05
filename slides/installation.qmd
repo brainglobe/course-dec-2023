@@ -6,7 +6,32 @@
 ```bash
 conda create --name brainglobe python=3.10 -y
 conda activate brainglobe
-conda install napari -c conda-forge
+conda install -c conda-forge napari pyqt
+```
+
+Double-check that running
+```bash
+napari
+```
+opens a new `napari` window.
+
+. . .
+
+::: {.callout-tip}
+## More details
+
+More details about using conda are available at [brainglobe.info](https://brainglobe.info/documentation/setting-up/conda.html){preview-link="true"}
+:::
+
+## Command line installation (alternative) {.smaller}
+
+. . .
+
+**Create a new conda environment and install napari with pip**
+```bash
+conda create --name brainglobe python=3.10 -y
+conda activate brainglobe
+pip install "napari[pyqt5]"
 ```
 
 Double-check that running
@@ -37,4 +62,3 @@ Install all brainglobe tools with
 ```{.bash}
 pip install brainglobe
 ```
-
