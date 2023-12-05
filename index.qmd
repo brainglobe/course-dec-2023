@@ -86,10 +86,6 @@ format:
 
 {{< include slides/napari-demo.qmd >}}
 
-# BrainGlobe & napari
-
-{{< include slides/brainglobe-and-napari.qmd >}}
-
 # Registration & segmentation
 
 # Cell detection
